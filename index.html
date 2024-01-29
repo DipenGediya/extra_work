@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        let user = "dipen";
+        let password = "123";
+
+        let e_user = prompt("Enter your id = ");
+        let e_password = prompt("Enter your password = ");
+
+        if(e_user === user && e_password === password)
+        {
+            console.log("login successfull");
+
+            let first_subject = parseInt(prompt("Enter your first_subject mark = "));
+            let second_subject = parseInt(prompt("Enter your second_subject mark = "));
+            let third_subject = parseInt(prompt("Enter your third_subject mark = "));
+            let fourth_subject = parseInt(prompt("Enter your fourth_subject mark = "));
+
+            console.log("mark of first_subject = ",first_subject);
+            console.log("mark of second_subject = ",second_subject);
+            console.log("mark of third_subject = ",third_subject);
+            console.log("mark of fourth_subject = ",fourth_subject);
+
+            let ave = first_subject + second_subject + third_subject + fourth_subject;
+
+            let result = ave/4;
+            console.log("your result = ",result);
+
+            if(result>90 && result<=100)
+            {
+                console.log(result,"Grade = A");
+            }
+            else if(result>75 && result<=90)
+            {
+                console.log(result,"Grade = B");
+            }
+            else if(result>60 && result<=75)
+            {
+                console.log(result,"Grade = C");
+            }
+            else if(result>40 && result<=60)
+            {
+                console.log(result,"Grade = D");
+            }
+            else if(result>0 && result<=40)
+            {
+                console.log("your fail");
+            }
+        }
+        else
+        {
+            console.log("Enter valid details");
+        }
+    </script>
+
+</body>
+</html>
