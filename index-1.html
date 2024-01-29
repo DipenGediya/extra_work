@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let user_id = "dipen";
+        let user_password = "123";
+        let user_role = "user";
+
+        let  admin_id = "abc";
+        let admin_password = "789";
+        let admin_role = "admin";
+
+        let e_id = prompt("Enter your id = ");
+        let e_password = prompt("Enter your password = ");
+        let e_role = prompt("Enter your role = ");
+
+        if(e_id === admin_id && e_password === admin_password && e_role === admin_role)
+        {
+            console.log("admin login successfull");
+
+            let product = prompt("Enter product = ");
+            console.log(product);
+        }
+        else if(e_id === user_id && e_password === user_password && e_role === user_role)
+        {
+            console.log("user login success");
+
+            console.log("hello user!");
+        }
+        else
+        {
+            console.log("Enter valid details");
+        }
+
+    </script>
+</body>
+</html>
