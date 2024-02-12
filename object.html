@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let product = prompt("Enter bat company = ");
+        console.log(product);
+
+        let bat = [
+            {
+                company: "new balance",
+                willow: "kashamir willow",
+                price: "2500",
+                available: true,
+            },
+            {
+                company: "new balance",
+                willow: "English willow",
+                price: "7600",
+                available: false,
+            },
+            {
+                company: "sg",
+                willow: "English willow",
+                price: "5000",
+                available: true,
+            },
+            {
+                company: "sg",
+                willow: "kashamir willow",
+                price: "1200",
+                available: true,
+            },
+            {
+                company: "ss",
+                willow: "English willow",
+                price: "7800",
+                available: false,
+            },
+            {
+                company: "ss",
+                willow: "kashamir willow",
+                price: "2000",
+                available: true,
+            },
+
+        ];
+
+        let result = bat.filter((val) => val.available == true && product == val.company && val.price >= "1000" && val.price <= "5000");
+        console.log(result);
+
+    </script>
+
+</body>
+
+</html>
