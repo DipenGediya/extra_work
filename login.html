@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label>User Name :-</label>
+    <input type="text" id="name"><br><br>
+    <label>Password :-</label>
+    <input type="text" id="password"><br><br>
+    <button onclick="submit()">submit</button>
+    <h1 id="title"></h1>
+
+
+
+    <script>
+
+        let user = "dipen";
+        let pass = 4917;
+
+        function submit() {
+
+            let name = document.getElementById("name").value;
+            let password = document.getElementById("password").value;
+
+            if (user === name) {
+                if (pass == password) {
+                    document.getElementById("title").innerHTML = "login successfull";
+                    document.getElementById("title").style.color = "green";
+                }
+                else {
+                    document.getElementById("title").innerHTML = "Enter valid password";
+                    document.getElementById("title").style.color = "red";
+                }
+            }
+            else {
+                document.getElementById("title").innerHTML = "Enter valid password";
+                document.getElementById("title").style.color = "red";
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
