@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        class bank {
+            constructor(name, email, age, mobile_no, deposite) {
+                this.name = name;
+                this.email = email;
+                this.age = age;
+                this.mobile_no = mobile_no;
+                this.balance = 5000;
+            }
+
+            creatAc() {
+                console.log(`Name = ${this.name}`);
+                console.log(`Email = ${this.email}`);
+                console.log(`Mobile no. = ${this.mobile_no}`);
+
+                if (this.age >= 18) {
+                    console.log(`Age = ${this.age}`);
+                    console.log(`your account number : ${Math.round(Math.random() * 1000000000000)}`);
+
+                } else {
+                    console.log("you are under 18");
+                }
+
+                console.log(`your balance : ${this.balance}`);
+            }
+
+            deposite(add) {
+                console.log(`deposite amount : ${add}`);
+                this.balance += add;
+            }
+
+            withdraw(get) {
+                console.log(`Withdraw amount : ${get}`);
+                this.balance -= get;                    
+            }
+
+            total_balance() {
+                if (this.balance>0) {
+                    console.log(`balance = ${this.balance}`);
+                } else {
+                    console.log("you cannot withdraw more than aviliable money");
+                }
+            }
+        }
+
+        let u1 = new bank("dipen", "dipen@gmail.com", 21, 9827435791)
+        u1.creatAc();
+        u1.deposite(10000);
+        u1.withdraw(4900);
+        u1.total_balance();
+
+        let u2 = new bank("rutvik","rutvikgodhani@gmail.com",22,5987412361);
+        u2.creatAc();
+        u2.deposite(15000);
+        u2.withdraw(8000);
+        u2.total_balance()
+    </script>
+
+</body>
+
+</html>
