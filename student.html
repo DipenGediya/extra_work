@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        class school {
+            constructor(name, role_no, std, total_fees, paid_fees, remain_fees) {
+                this.name = name;
+                this.role_no = role_no;
+                this.std = std;
+                this.total_fees = total_fees;
+                this.paid_fees = paid_fees;
+                this.remain_fees = remain_fees;
+            }
+
+            studentDetails() {
+                console.log(`Name : ${this.name}`);
+                console.log(`Roll No : ${this.role_no}`);
+                console.log(`Standard : ${this.std}`);
+                console.log(`Total_Fees : ${this.total_fees}`);
+                console.log(`Paid_Fees : ${this.paid_fees}`);
+                console.log(`Remain_Fees : ${this.remain_fees}`);
+            }
+
+        }
+
+        class student extends school {
+            constructor(name, role_no, std, total_fees, paid_fees, remain_fees, account, english, economic, gujrati, maths) {
+                super(name, role_no, std, total_fees, paid_fees, remain_fees);
+                this.account = account;
+                this.english = english;
+                this.economic = economic;
+                this.gujrati = gujrati;
+                this.maths = maths;
+            };
+
+            markDetails() {
+                this.studentDetails();
+                console.log(`Marks of Account = ${this.account}`);
+                console.log(`Marks of English = ${this.english}`);
+                console.log(`Marks of Economic = ${this.economic}`);
+                console.log(`Marks of Gujrati = ${this.gujrati}`);
+                console.log(`Marks of Maths = ${this.maths}`);
+
+            }
+
+            markAve() {
+                let ave = this.account + this.english + this.economic + this.gujrati + this.maths;
+
+                let result = ave / 5;
+
+                console.log(`Result = ${result}`);
+            };
+
+        }
+
+        let s1 = new student("dipen", 49, 12, 40000, 18000, 40000-18000, 98, 95, 97, 94, 96);
+        s1.markDetails()
+        s1.markAve()
+    </script>
+
+</body>
+
+</html>
