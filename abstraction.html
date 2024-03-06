@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        function employee(name, age, department,salary) {
+            let y_name = name;
+            let y_age = age;
+            let y_department = department;
+            let t_salary = salary;
+
+            let salaryslip = () => {
+                let bonus = t_salary * 20 / 100;
+                let tex = t_salary * 12 / 100;
+
+                return totalSalary = t_salary + bonus + tex;
+            };
+
+            this.print = () =>{
+                console.log(`Name : ${y_name}`);
+                console.log(`Age : ${y_age}`);
+                console.log(`Department : ${y_department}`);
+                console.log(`Salary : ${t_salary}`);
+
+                let result = salaryslip()
+                console.log(`Total Salary : ${result}`);
+            }
+        }
+
+        let e1 = new employee("Dipen", 21 , "Web Developer",500000)
+        e1.print();
+        
+    </script>
+
+</body>
+
+</html>
