@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>title</td>
+                <td>price</td>
+                <td>description</td>
+                <td>category</td>
+                <td>image</td>
+                <td>rating</td>
+            </tr>
+        </thead>
+
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+
+
+    <script>
+
+        let getData = async () => {
+            let res = await fetch("https://fakestoreapi.com/products");
+            let result = await res.json()
+
+            console.log(result);
+
+            tbody = document.getElementById("tbody")
+            
+            result.map((val,index)=>{
+                let tr = document.createElement("tr");
+
+                tr.innerHTML = `
+                                <td>${val.id}</td>
+                                <td>${val.title}</td>
+                                <td>${val.price}</td>
+                                <td>${val.description}</td>
+                                <td>${val.category}</td>
+                                <td><img height="50px" src="${val.image}"></td>
+                                <td>${val.rating}</td>
+                `
+
+                 tbody.appendChild(tr);
+            })
+        }
+
+        getData();
+
+    </script>
+
+</body>
+
+</html>

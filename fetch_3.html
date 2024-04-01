@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>title</td>
+                <td>description</td>
+                <td>price</td>
+                <td>discountPercentage</td>
+                <td>stock</td>
+                <td>brand</td>
+                <td>category</td>
+                <td>thumbnail</td>
+                <td>image</td>
+            </tr>
+        </thead>
+
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+
+
+    <script>
+
+        let getData = async () => {
+            let res = await fetch(" https://dummyjson.com/products");
+            let result = await res.json()
+
+            console.log(result);
+
+            tbody = document.getElementById("tbody")
+            
+            result.map((val,index)=>{
+                let tr = document.createElement("tr");
+
+                tr.innerHTML = `
+                                <td>${val.id}</td>
+                                <td>${val.title}</td>
+                                <td>${val.description}</td>
+                                <td>${val.price}</td>
+                                <td>${val.discountPercentage}</td>
+                                <td>${val.stock}</td>
+                                <td>${val.brand}</td>
+                                <td>${val.category}</td>
+                                <td>${val.thumbnail}</td>
+                                <td><img height="50px" src="${val.images}"></td>
+                `
+
+                 tbody.appendChild(tr);
+            })
+        }
+
+        getData();
+
+    </script>
+
+</body>
+
+</html>
