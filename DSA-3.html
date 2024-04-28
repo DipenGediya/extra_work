@@ -22,19 +22,14 @@
             }
 
             addElement(element) {
-
                 this.array.push(element)
-
             }
 
             secondArray(element) {
-
                 this.second_Array.push(element)
-
             }
 
-            print() {
-                
+            print() {               
                 this.array.map((val, ind) => {
                     console.log(val);
                 })
@@ -43,16 +38,13 @@
                 this.second_Array.map((val, ind) => {
                     console.log(val);
                 })
-
             }
 
             margeArray() {
-
                 let temp = this.array.length
 
                 for (let i = 0; i < this.array.length; i++) {
                     this.marge[i] = this.array[i]
-
                 }
 
                 for (let i = 0; i < this.second_Array.length; i++) {
@@ -68,44 +60,33 @@
             }
 
             IsUnderflow() {
-
                 if (this.marge.length == 0) {
                     console.log("Array is underflow");
                 }
-
             }
 
             IsOverFlow() {
-
                 if (this.marge.length > 9) {
                     console.log("Array is overflow");
                 }
-
             }
 
             lastElement() {
-
                 console.log("Last Element");
                 console.log(this.marge[0]);
-
             }
 
             firstElement() {
-
                 console.log("First Element");
                 console.log(this.marge[this.marge.length - 1]);
-
             }
 
             lastSecond() {
-
                 console.log("lastSecond Element");
                 console.log(this.marge[1]);
-
             }
 
             margeSort() {
-
                 console.log("Marge Array Sort");
 
                 for (let i = 0; i < this.marge.length; i++) {
@@ -119,17 +100,14 @@
                     }
                     console.log(this.marge[i]);
                 }
-
             }
 
             reverse() {
-
                 console.log("Reverse Array");
 
                 for (let i = this.marge.length - 1; i >= 0; i--) {
                     console.log(this.marge[i]);
                 }
-
             }
 
         }
