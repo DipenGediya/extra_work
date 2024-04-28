@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        class stack {
+
+            constructor() {
+                this.array = []
+                this.second_Array = []
+                this.marge = []
+
+            }
+
+            addElement(element) {
+
+                this.array.push(element)
+
+            }
+
+            secondArray(element) {
+
+                this.second_Array.push(element)
+
+            }
+
+            print() {
+                
+                this.array.map((val, ind) => {
+                    console.log(val);
+                })
+
+                console.log("second Array");
+                this.second_Array.map((val, ind) => {
+                    console.log(val);
+                })
+
+            }
+
+            margeArray() {
+
+                let temp = this.array.length
+
+                for (let i = 0; i < this.array.length; i++) {
+                    this.marge[i] = this.array[i]
+
+                }
+
+                for (let i = 0; i < this.second_Array.length; i++) {
+                    this.marge[temp] = this.second_Array[i];
+                    temp++;
+                }
+
+                console.log("Marge Two Array");
+
+                this.marge.map((val, ind) => {
+                    console.log(val);
+                })
+            }
+
+            IsUnderflow() {
+
+                if (this.marge.length == 0) {
+                    console.log("Array is underflow");
+                }
+
+            }
+
+            IsOverFlow() {
+
+                if (this.marge.length > 9) {
+                    console.log("Array is overflow");
+                }
+
+            }
+
+            lastElement() {
+
+                console.log("Last Element");
+                console.log(this.marge[0]);
+
+            }
+
+            firstElement() {
+
+                console.log("First Element");
+                console.log(this.marge[this.marge.length - 1]);
+
+            }
+
+            lastSecond() {
+
+                console.log("lastSecond Element");
+                console.log(this.marge[1]);
+
+            }
+
+            margeSort() {
+
+                console.log("Marge Array Sort");
+
+                for (let i = 0; i < this.marge.length; i++) {
+                    for (let j = i + 1; j < this.marge.length; j++) {
+                        if (this.marge[i] > this.marge[j]) {
+
+                            let swap = this.marge[i];
+                            this.marge[i] = this.marge[j];
+                            this.marge[j] = swap;
+                        }
+                    }
+                    console.log(this.marge[i]);
+                }
+
+            }
+
+            reverse() {
+
+                console.log("Reverse Array");
+
+                for (let i = this.marge.length - 1; i >= 0; i--) {
+                    console.log(this.marge[i]);
+                }
+
+            }
+
+        }
+
+        let s1 = new stack();
+
+        s1.IsUnderflow();
+
+        s1.addElement(49);
+        s1.addElement(17);
+        s1.addElement(21);
+        s1.addElement(31);
+        s1.addElement(45);
+
+        s1.secondArray(789)
+        s1.secondArray(799)
+        s1.secondArray(735)
+        s1.secondArray(0)
+
+        s1.print();
+
+        s1.margeArray()
+        s1.IsOverFlow();
+
+        s1.lastElement()
+        s1.lastSecond()
+        s1.firstElement()
+
+        s1.margeSort()
+        s1.reverse()
+
+
+
+    </script>
+
+</body>
+
+</html>
